@@ -139,7 +139,7 @@ template <class T>
 int Sorts<T>::bs_aux(std::vector<T> &prueba, int low, int high, int val) {
 	int mid;
 
-	if (low <= high) {
+	if (low < high) {
 		mid = (high + low) / 2;
 		if (val == prueba[mid]) {
 			return mid;
