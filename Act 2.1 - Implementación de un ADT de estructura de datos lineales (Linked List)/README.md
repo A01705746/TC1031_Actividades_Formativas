@@ -1,16 +1,16 @@
 # Análisis de complejidad temporal
 
-# Ordena Selección
-Ordena en forma ascendente los datos con el método de Selcción, siendo la entrada un vector de enteros con n números. Es un algoritmo de O(n^2) en el peor de los casos, esto debido a los for anidados, va de "i" a "n" y de "j" a "i", recorriendo n^2 pasos.
+# add
+Inserta un elemento en la estructura de datos de acuerdo a la política de acceso de la estructura, su entrada es la estructura de datos y el elemento a insertar, no tiene salida. Como precondición necesita ser una estructura válida y como postcondición la estructura debe ser modificada. Se divide en dos funciones, addFirst que añade el elemento en la primera posición de la estructura, al ser un paso directo tendría complejidad O(1), y add que recorre toda la estructura hasta llegar al último lugar y seguidamente añadir el nuevo elemento, es por ello que su complejidad sería O(n).
 
-# Ordena Burbuja
-Ordena en forma ascendentelos datos con el método de Burbuja, siendo la entrada un vector de enteros con n números. De igual forma cuenta con for anidados, se puede entender su complejidad como (n*(n+1))/2, por lo que lo más próximo a la tabla de complejidad es O(n^2) para el peor de los casos.
+# find
+Encuentra un elemento en la estructura y devuelve su posición, su entrada es el elemento a buscar como entero y su salida es las posición en la que se encuentra o -1 en caso de que no exista en la estructura. Como precondición y postcondición la estructura tiene que ser válida. Como tiene que recorrer todos los elementos para comprobar si se encuentra el valor entonces tiene una complejidad O(n).
 
-# Ordena Merge
-Ordena en forma ascendente los datos con el método de Merge, siendo la entrada un vector de enteros con n números. Por su naturaleza tiene que recorrer los n elementos del arreglo, pero al momento de ordenar las particiones toma una forma de log n, esto se debe a que por cada dos divisiones hay un ordenamiento, por lo que su complejidad sería O(n log n) para el peor de los casos.
+# update
+Actualiza un elemento dentro de la estructura de datos de acuerdo a la estructura de datos específica, su entrada es la posición de elemento a actualizar y el valor nuevo, no tiene salida. Como precondición necesita ser una estructura válida y como postcondición la estructura debe ser actualizada. La función sigue recorriendo los elementos uno por uno hasta llegar al índice deseado por lo que su complejidad es O(n).
 
-# Búsqueda Secuencial
-Busca con la busqueda secuencial un dato entero dentro del vector, siendo la entrada el vector de enteros y el dato que se desea buscar, devolviendo como salida el índice en el que se encuentra el dato o -1 en caso de que no se localice. Este tipo de búsqueda necesita recorrer todos y cada uno de los elementos del vector para realizar la búsqueda, es un algoritmo lineal O(n) ya que recorre n pasos.
+# remove
+Borrar un elemento dentro de la estructura de datos segun su posición, su entrada es la posición del elemento a eliminar y su salida el valor del elemento eliminado. Como precondición necesita ser una estructura válida y como postcondición la estructura debe ser actualizada. Tiene dos partes, la primera que er removeFirst que elimina el primer elemento de la estrcutura, es una operación directa así que su complejidad es O(1), la segunda es remove que recorre toda la estructura hasta encontrar el índice deseado, se crea el nuevo enlace y se borra el elemento, su complejidad sería O(n).
 
-# Búsqueda Binaria
-Busca con la busqueda binaria un dato entero dentro del vector, siendo la entrada el vector de enteros y el dato que se desea buscar, devolviendo como salida el índice en el que se encuentra el dato o la posición donde debería estar  en caso de que no se localice. Ya que el algoritmo va dividiendo el arreglo y descartando las partes menores o mayores al valor recorre menos pasos que la cantidad de elementos del vector, entonces su complejidad sería O(log n).
+# Consideraciones
+Para que el programa funcione de manera correcta es necesario que se descargue de igual manera el archivo de expeciones de la misma carpeta.
