@@ -1,13 +1,13 @@
 # Análisis de complejidad temporal
 
-# add
-Inserta un elemento en la estructura de datos de acuerdo a la política de acceso de la estructura, su entrada es la estructura de datos y el elemento a insertar, como salida es la structura de datos valida mostrando la inserción del elemento . Como precondición necesita ser una estructura válida y como postcondición la estructura debe ser modificada. Tiene la función add que recorre toda la estructura hasta llegar al último lugar y seguidamente añadir el nuevo elemento, es por ello que su complejidad sería O(n).
+# visit
+Desplegará cada uno de los datos almacenados en el BST en formato Preorder, Inorder, Postorder y Level by level. No tiene entrada y su salida será un string con los 4 recorridos, seperados por un salto de línea \n entre cada uno. Como precondición es necesario un BST válido, no tiene postcondición. La función estpa compuesta por otras 4, que son los formatos mencionados anteriormente, debido a que son formas distintas de imprimir los datos del árbol es necesario que recorra su totalidad en los 4 casos, por lo que su complejidad sería O(n).
 
-# find
-Encuentra un elemento en la estructura y devuelve su posición, su entrada es el la estructura de datos e información adicional sobre el elemento a recuperar (dependiendo de la estructura de datos) y su salida es las posición en la que se encuentra o -1 en caso de que no exista un elemento con esas características. Como precondición la estructura tiene que ser válida. Como tiene que recorrer todos los elementos para comprobar si se encuentra el valor entonces tiene una complejidad O(n).
+# height
+Regresa la altura del BST, no tiene entrada y su salida es un entero con el cual indicará la altura del BST. Como precondición es necesario un BST válido, no tiene postcondición. Ya que necesita navegar el árbol para encontrar su profundidad terminará recorriendolo todo, entonces su complejidad sería O(n).
 
-# update
-Actualiza un elemento dentro de la estructura de datos de acuerdo a la estructura de datos específica, su entrada es la estructura de datos, el elemento a actualizar y los valores a modificar, como salida es la estructura de datos debidamente actualizada. Como precondición necesita ser una estructura válida y como postcondición la estructura debe ser actualizada. La función sigue recorriendo los elementos uno por uno hasta llegar al índice deseado por lo que su complejidad es O(n).
+# ancestors
+Despliega los ancestros de un dato (todos los nodos arriba de n hasta llegar a la raiz), como entrada es el dato del cual se desea conocer los ancestros y como salida un string con los ancestros. Como precondición es necesario un BST válido, no tiene postcondición. Ya que se trata de una búsqueda en el árbol mientras se van guardando los valores anteriores tendría una complejidad O(log n) para el mejor de los casos y O(n) para el peor, pues no siempre recorre todo el árbol.
 
-# remove
-Borra un elemento dentro de la estructura de datos de acuerdo a la estructura de datos específica, su entrada es la estructura de datos y criterios que determinan el elemento a borrar, su salida es la estructura de datos actualizada. Como precondición necesita ser una estructura válida y como postcondición la estructura debe ser actualizada. Tiene dos partes, la primera que er removeFirst que elimina el primer elemento de la estrcutura, es una operación directa así que su complejidad es O(1), la segunda es remove que recorre toda la estructura hasta encontrar el índice deseado, se crea el nuevo enlace y se borra el elemento, su complejidad sería O(n).
+# whatlevelamI
+Regresa un entero que indica el nivel en que se encuentra un dato, o -1 en caso de que no se encuentre en el BST. Como precondición es necesario un BST válido, no tiene postcondición. Sigue siendo un algoritmo de búsqueda pero esta vez en forma de un contador que va aumentando hasta que llega al nivel del dato, es por esto que su complejidad sería O(log n) para el mejor de los casos y O(n) para el peor.
