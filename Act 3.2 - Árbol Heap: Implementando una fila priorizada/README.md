@@ -14,3 +14,6 @@ Regresa un valor boleando diciendo si la fila priorizada esta vacía o tiene dat
 
 # size
 Regresa la cantidad de datos que tiene la fila priorizada. No tiene entrada y su salida es un valor entero que represena la cantidad de datos de la fila priorizada. No tiene precondición ni postcondición. Nuevamente hacemos uso de la variable count, esta vez no hacemos ninguna comparación, solo se devuelve al valor de la variable, por lo tanto su complejidad sería O(1).
+
+# Consideraciones
+Es necesario descargar igualmente el archivo _exception.h_ para el correcto funcionamiento del programa.
