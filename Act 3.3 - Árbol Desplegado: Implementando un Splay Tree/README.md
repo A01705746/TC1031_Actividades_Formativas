@@ -1,7 +1,7 @@
 # Análisis de complejidad temporal
 
 # add
-Agregua un dato al Splay Tree. Su entrada es un entero, el cual se desea agregar al Splay Tree, no tiene salida. Como preconcición n es un entero y como postcondición el Splay Tree contiene un nuevo dato y se balancea siguiedo las reglas de splay. La función compara los valores por ramas para revisar donde entra el nuevo valor, una vez llega a la posición deseada se inserta el dato y realiza las operacione de balance splay, no recorre todo el árbol por lo que su complejidad sería O(log n).
+Agrega un dato al Splay Tree. Su entrada es un entero, el cual se desea agregar al Splay Tree, no tiene salida. Como preconcición n es un entero y como postcondición el Splay Tree contiene un nuevo dato y se balancea siguiedo las reglas de splay. La función compara los valores por ramas para revisar donde entra el nuevo valor, una vez llega a la posición deseada se inserta el dato y realiza las operacione de balance splay, no recorre todo el árbol por lo que su complejidad sería O(log n).
 
 # remove
 Elimina el dato del Splay Tree. La entrada es el dato entero que se desea borrar y no tienen salida. No tiene precondición y su postcondición es que el Splay Tree queda sin el dato de entrada en caso de que este exista y se balancea siguiedo las reglas de splay. La función navega por las ramas hasta llegar al valor que se desea borrar, lo elimina y lo balancea, no recorre todo el árbol por lo que su complejidad es O(log n).
