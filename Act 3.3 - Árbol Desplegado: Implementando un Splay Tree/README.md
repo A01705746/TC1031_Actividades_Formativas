@@ -1,19 +1,16 @@
 # Análisis de complejidad temporal
 
-# push
-Agrega un dato a la fila priorizada, como entrada es un entero, el cual se desea agregar a la fila priorizada, no tiene salida. Como precondición el valor n debe ser entero y de postcondición la fila priorizada tendrá un nuevo dato. Utiliza un ciclo while para comparar los tamaños, pues el padre siempre debe ser menor al hijo, como sólo navega por una rama y no por todo el árbol su complejidad sería O(log n).
+# add
+Agregua un dato al Splay Tree. Su entrada es un entero, el cual se desea agregar al Splay Tree, no tiene salida. Como preconcición n es un entero y como postcondición el Splay Tree contiene un nuevo dato y se balancea siguiedo las reglas de splay. La función compara los valores por ramas para revisar donde entra el nuevo valor, una vez llega a la posición deseada se inserta el dato y realiza las operacione de balance splay, no recorre todo el árbol por lo que su complejidad sería O(log n).
 
-# pop
-Saca de la fila priorizada el dato que tiene mayor prioridad, es decir la raíz. No tiene entrada ni salida. Como precondición la fila debe tener al menos un dato y como postcondición la fila deberá quedar sin el dato con mayor prioridad. La eliminación del dato es directa pues se borra la raíz y se reemplaza por el útlimo elemento que fue agregado, sin embargo se debe reorganizar el árbol mediante la función heapify, la cual hace los swaps necesarios para que cada padre tenga hijos mayores que él, no afecta la totalidad del árbol, por lo tanto su complejidad sería O(log n).
+# remove
+Elimina el dato del Splay Tree. La entrada es el dato entero que se desea borrar y no tienen salida. No tiene precondición y su postcondición es que el Splay Tree queda sin el dato de entrada en caso de que este exista y se balancea siguiedo las reglas de splay. La función navega por las ramas hasta llegar al valor que se desea borrar, lo elimina y lo balancea, no recorre todo el árbol por lo que su complejidad es O(log n).
 
-# top
-Regresa el valor del dato que esta con mayor prioridad en la fila priorizada, es decir su raíz. No tiene entrada y su salida es el dato que tiene mayor prioridad dentro de la Fila priorizada. Como precondición la fila debe contener al menos un dato, no tiene postcondición. La raíz siempre es el primer elemento del arreglo, por lo que para obtener su valor es una operación directa, entonces su complejidad sería O(1).
+# find
+Regresa un valor boleano que representa si el dato qus se desea encontrar existe o no. La entrada es el entero que se busca y la salida un valor boleando que representa si el dato qus se desea encontrar existe o no. No tiene precondición y su postcondición es que el Splay Tree será modificado después de la búsqueda siguiedo las reglas de splay. Nuevamente, la función navega por las ramas entra valores mayores y menores hasta encontrar el valor deseado, exista o no exista dicho valor nunca se recorre el árbol en su totalidad por lo que la complejidad es O(log n).
 
-# empty
-Regresa un valor boleando diciendo si la fila priorizada esta vacía o tiene datos. No tiene entrada y su salida es un valor boleano que diga si la fila priorizada esta vacía o tiene datos. No tiene precondición ni postcondición. La función revisa la variable count que es la encargada de contar cuantos valores hay en el arreglo, es una operación directa que no cambia por lo que su complejidad sería O(1).
+# inorder
+Despliega en inrorder  el contenido del Splay Tree. No tiene entrada, su salida es un string con el Splay Tree. No tiene precondición ni postcondición. Puesto que necesita meter en un string todos los elementos del Splay lo necesita recorrer en su totalidad, por lo que su complejidad sería O(n).
 
 # size
-Regresa la cantidad de datos que tiene la fila priorizada. No tiene entrada y su salida es un valor entero que represena la cantidad de datos de la fila priorizada. No tiene precondición ni postcondición. Nuevamente hacemos uso de la variable count, esta vez no hacemos ninguna comparación, solo se devuelve al valor de la variable, por lo tanto su complejidad sería O(1).
-
-# Consideraciones
-Es necesario descargar igualmente el archivo _exception.h_ para el correcto funcionamiento del programa.
+Regresa la cantidad de datos que tiene el Splay Tree. No tiene entrada, su salida es un valor entero que represena la cantidad de datos el Splay Tree. No tiene precondición ni postcondición. La función devuelve al valor de la variable count, que es la encargada de contar cuantos valores hay en el splay, por lo tanto su complejidad sería O(1).
