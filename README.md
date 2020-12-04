@@ -3,4 +3,4 @@ Aquí se encuentran las tareas formativas de la materia Programación de estruct
 
 # Correcciones
 # Actividad 2.2
--Se corrigió el análisis de complejidad de la función add.
+-Se corrigió el análisis de complejidad de la función add de la double-linked list.
