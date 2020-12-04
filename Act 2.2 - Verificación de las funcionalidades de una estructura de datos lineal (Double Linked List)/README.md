@@ -1,7 +1,7 @@
 # Análisis de complejidad temporal
 
 # add
-Inserta un elemento en la estructura de datos de acuerdo a la política de acceso de la estructura, su entrada es la estructura de datos y el elemento a insertar, como salida es la structura de datos valida mostrando la inserción del elemento . Como precondición necesita ser una estructura válida y como postcondición la estructura debe ser modificada. Tiene la función add que recorre toda la estructura hasta llegar al último lugar y seguidamente añadir el nuevo elemento, es por ello que su complejidad sería O(n).
+Inserta un elemento en la estructura de datos de acuerdo a la política de acceso de la estructura, su entrada es la estructura de datos y el elemento a insertar, como salida es la structura de datos valida mostrando la inserción del elemento . Como precondición necesita ser una estructura válida y como postcondición la estructura debe ser modificada. Debido a que es un set de instrucciones fijo, añadiendolo con el apuntador tail, tiene un comportamiento constante por lo que su complejidad sería O(1).
 
 # find
 Encuentra un elemento en la estructura y devuelve su posición, su entrada es el la estructura de datos e información adicional sobre el elemento a recuperar (dependiendo de la estructura de datos) y su salida es las posición en la que se encuentra o -1 en caso de que no exista un elemento con esas características. Como precondición la estructura tiene que ser válida. Como tiene que recorrer todos los elementos para comprobar si se encuentra el valor entonces tiene una complejidad O(n).
